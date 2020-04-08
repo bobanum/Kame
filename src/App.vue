@@ -59,7 +59,7 @@ nav, .menu, .nav {
   }
 }
 #app {
-  min-height: 100%;
+  height: 100%;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   & > header, & > footer {

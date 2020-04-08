@@ -1,0 +1,17 @@
+<svg width="50" height="50" version="1.1" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<clipPath id="clip">
+			<rect width="50" height="50" fill="none" stroke="#00f"/>
+		</clipPath>
+		<pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+			<g clip-path="url(#clip)">
+				<path d="m50 5h-50m50 10h-50m50 20h-50m50 10h-50m45-45v50m-10-50v50m-20-50v50m-10-50v50m45-40h-50m50 10h-50m50 10h-50m50 10h-50m40-40v50m-10-50v50m-10-50v50m-10-50v50" fill="none" stroke="#eee"/>
+				<path d="m25 1e-5v50m25-25h-50" fill="none" stroke="#ddd"/>
+				<path d="m0 1e-5v50m50-50v50h-50m50-50h-50" fill="none" stroke="#ccc"/>
+			</g>
+		</pattern>
+	</defs>
+	<g>
+		<rect width="50" height="50" fill="url(#grid)"/>
+	</g>
+</svg>

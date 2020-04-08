@@ -3,7 +3,7 @@
         <panel-code class="left"/>
         <panel-options class="right"/>
         <panel-console class="bottom"/>
-        <div class="display"></div>
+        <scene/>
     </div>
 </template>
 
@@ -17,12 +17,14 @@
 </style>
 
 <script>
-import PanelCode from "@/components/PanelCode";
-import PanelOptions from "@/components/PanelOptions";
 import PanelConsole from "@/components/PanelConsole";
+import PanelOptions from "@/components/PanelOptions";
+import PanelCode from "@/components/PanelCode";
+import Scene from "@/components/Scene";
 export default {
     name: "Ide",
     components: {
+        Scene,
         PanelCode,
         PanelOptions,
         PanelConsole,
