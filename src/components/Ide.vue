@@ -1,8 +1,8 @@
 <template>
     <div class="ide">
-        <panel-code/>
-        <panel-options/>
-        <panel-console/>
+        <panel-code class="left"/>
+        <panel-options class="right"/>
+        <panel-console class="bottom"/>
         <div class="display"></div>
     </div>
 </template>
@@ -12,12 +12,6 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: 1fr auto;
-}
-.panel {
-    background-color: hsl(var(--hue), var(--sat), 10%);
-    color: hsl(var(--hue), var(--sat), 100%);
-    border: 1px solid black;
-    display: grid;
 }
 
 </style>

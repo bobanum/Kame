@@ -1,18 +1,23 @@
 <template>
-    <div class="panel" id="panel-console">
+    <panel id="panel-console" class="bottom">
 
-    </div>
+    </panel>
 </template>
 
 <style lang="scss">
 #panel-console {
+    --size: 100px;
     grid-row: -2 / -1;
     grid-column: 2 / -1;
 }
 </style>
 
 <script>
+import Panel from "./Panel"
 export default {
-    name: "PanelConsole"
+    name: "PanelConsole",
+    components: {
+        Panel
+    }
 }
 </script>

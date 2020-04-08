@@ -28,12 +28,12 @@ export default {
 </script>
 
 <style lang="scss">
- @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;700&display=swap');
 
 
 :root {
   --hue: 150;
-  --sat: 10%;
+  --sat: 50%;
 }
 html {
   height: 100%;

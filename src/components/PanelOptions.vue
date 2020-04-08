@@ -1,25 +1,22 @@
 <template>
-    <div class="panel" id="panel-options">
-        div.resize
-    </div>
+    <panel id="panel-options">
+    </panel>
 </template>
 
 <style lang="scss">
 #panel-options {
+    --size: 200px;
     grid-row: 1 / 1;
     grid-column: -2 / -1;
-    width:200px;
-    grid-template-columns: 1fr auto;
-    .resize {
-        border:1px solid black;
-        padding: 1px;
-        grid-row: ;
-    }
 }
 </style>
 
 <script>
+import Panel from "./Panel"
 export default {
-    name: "PanelOptions"
+    name: "PanelOptions",
+    components: {
+        Panel
+    }
 }
 </script>
