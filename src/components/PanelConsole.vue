@@ -6,7 +6,7 @@
 
 <style lang="scss">
 #panel-console {
-    --size: 100px;
+    --size: 3px;
     grid-row: -2 / -1;
     grid-column: 2 / -1;
 }

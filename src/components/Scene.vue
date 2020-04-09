@@ -1,10 +1,6 @@
 <template>
 <svg version="1.1" viewBox="-750 -500 1500 1000" width="0" height="0" style="min-width:100%; min-height:100%;" xmlns="http://www.w3.org/2000/svg">
     <defs>
-        
-        <g id="kame">
-        <use transform="scale(2)" href="../assets/kame.svg#kame"></use>
-        </g>
         <clipPath id="clip">
 			<rect width="50" height="50" fill="none" stroke="#00f"/>
 		</clipPath>
@@ -17,9 +13,18 @@
 		</pattern>
 	</defs>
     <rect width="100%" height="100%" x="-750" y="-500" fill="url(#grid)"></rect>
-    <use style="transform:translate(calc(1px * var(--x)), calc(1px * var(--y))) rotate(calc(1deg * var(--angle)))" href="#kame"></use>
+    <kame x="100" y="-50" angle="45"/>
 </svg>
 </template>
 
 <style lang="scss">
 </style>
+
+<script>
+import Kame from "./Kame";
+export default {
+    components: {
+        Kame,
+    }
+}
+</script>

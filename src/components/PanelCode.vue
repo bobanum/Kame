@@ -1,6 +1,17 @@
 <template>
     <panel id="panel-code">
-        <ace v-model="content" @init="editorInit" lang="javascript" theme="chrome" width="400" height="200"></ace>
+        <div class="editor">
+            <div class="toolbar">
+                <ul>
+                    <li @click="clickplay"><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#play"/></svg></li>
+                    <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#skip"/></svg></li>
+                    <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#in"/></svg></li>
+                    <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#out"/></svg></li>
+                    <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#pause"/></svg></li>
+                </ul>
+            </div>
+            <ace ref="ace" v-model="content" @init="editorInit" lang="javascript" theme="chrome" width="400" height="200"></ace>
+        </div>
     </panel>
 </template>
 
@@ -9,6 +20,19 @@
     --size: 400px;
     grid-row: 1 / -1;
     grid-column: 1 / 2;
+}
+.toolbar {
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    svg {
+        width: 32px;
+        height: 32px;
+        fill: white;
+    }
 }
 </style>
 
@@ -34,7 +58,16 @@ export default {
             require('brace/mode/sass')
             require('brace/theme/chrome')
             require('brace/snippets/javascript') //snippet
-        }
-    }
+        },
+        clickplay() {
+            // var code = this.$refs.ace.editor.getValue()
+            // var t = this.$refs.ace.editor.session.bgTokenizer.getTokens(2);
+            // var t2 = this.$refs.ace.editor.session.bgTokenizer.getState(2);
+            var ace = require("brace");
+            var Range = ace.acequire('ace/range').Range;
+            this.$refs.ace.editor.session.addMarker(new Range(1, 0, 1, 10), "ace_active-line", "fullLine");
+            console.log(new Range(1, 0, 3, 10));
+        },
+    },
 }
 </script>
