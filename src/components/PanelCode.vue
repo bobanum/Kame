@@ -18,8 +18,8 @@
 <style lang="scss">
 #panel-code {
     --size: 400px;
-    grid-row: 1 / -1;
-    grid-column: 1 / 2;
+    grid-row: 1 / -2;
+    grid-column: 1 / span 1;
 }
 .toolbar {
     ul {

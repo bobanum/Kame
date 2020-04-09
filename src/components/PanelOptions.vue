@@ -5,9 +5,9 @@
 
 <style lang="scss">
 #panel-options {
-    --size: 200px;
-    grid-row: 1 / 1;
-    grid-column: -2 / -1;
+    --size: 64px;
+    grid-row: 1 / -1;
+    grid-column: -2 / span 1;
 }
 </style>
 
