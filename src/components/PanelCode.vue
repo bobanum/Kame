@@ -1,17 +1,15 @@
 <template>
     <panel id="panel-code">
-        <div class="editor">
-            <div class="toolbar">
-                <ul>
-                    <li @click="clickplay"><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#play"/></svg></li>
-                    <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#skip"/></svg></li>
-                    <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#in"/></svg></li>
-                    <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#out"/></svg></li>
-                    <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#pause"/></svg></li>
-                </ul>
-            </div>
-            <ace ref="ace" v-model="content" @init="editorInit" lang="javascript" theme="chrome" width="400" height="200"></ace>
+        <div class="toolbar">
+            <ul>
+                <li @click="clickplay"><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#play"/></svg></li>
+                <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#skip"/></svg></li>
+                <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#in"/></svg></li>
+                <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#out"/></svg></li>
+                <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#pause"/></svg></li>
+            </ul>
         </div>
+        <ace style="font-size: 16px" ref="ace" v-model="content" @init="editorInit" lang="javascript" theme="chrome" width="100%" height="100%"></ace>
     </panel>
 </template>
 
@@ -20,6 +18,7 @@
     --size: 400px;
     grid-row: 1 / -2;
     grid-column: 1 / span 1;
+    grid-template-rows: auto 1fr;
 }
 .toolbar {
     ul {

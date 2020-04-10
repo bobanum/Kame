@@ -10,5 +10,6 @@
     color: hsl(var(--hue), var(--sat), 100%);
     border: 1px solid black;
     display: grid;
+    padding: .5em;
 }
 </style>

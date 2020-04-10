@@ -13,7 +13,7 @@
 .ide {
     --resize-width: 3px;
     display: grid;
-    grid-template-columns: 400px 1fr 64px;
+    grid-template-columns: 430px 1fr 64px;
     grid-template-rows: 1fr 100px;
     grid-template-areas: "a b c" "d b c";
     grid-gap: var(--resize-width);

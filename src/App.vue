@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <svg><use href="./assets/logo_kame.svg#logo"/></svg>
-      <h1>KAME</h1>
+      <h1>KAME : Logo Javascript</h1>
       </header>
     <nav>
       <!-- <ul>
