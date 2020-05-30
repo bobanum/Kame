@@ -9,7 +9,10 @@
                 <li><svg viewBox="0 0 32 32"><use href="../assets/icons.svg#pause"/></svg></li>
             </ul>
         </div>
-        <ace style="font-size: 16px" ref="ace" v-model="content" @init="editorInit" lang="javascript" theme="chrome" width="100%" height="100%"></ace>
+        <textarea name="code" id="code" cols="3" rows="1">avancer(10);
+for (let x = 0; x < 10; x += 1) {
+    tourner(5);
+}</textarea>
     </panel>
 </template>
 
@@ -37,7 +40,7 @@
 
 <script>
 import Panel from "./Panel"
-import Ace from "vue2-ace-editor"
+import ace from "brace"
 export default {
     name: "PanelCode",
     data() {
@@ -45,8 +48,17 @@ export default {
             content: "avancer(10);\r\nfor (let x = 0; x < 10; x += 1) {\r\ntourner(5);\r\n}",
         }
     },
+    mounted() {
+        console.log(ace);
+        require('brace/mode/javascript')    //language
+        require('brace/theme/twilight')
+        var editor = ace.edit("code", {
+            mode: "brace/mode/javascript",
+            selectionStyle: "text"
+        });
+        editor.setTheme("ace/theme/twilight")
+    },
     components: {
-        Ace,
         Panel,
     },
     methods: {
@@ -62,10 +74,10 @@ export default {
             // var code = this.$refs.ace.editor.getValue()
             // var t = this.$refs.ace.editor.session.bgTokenizer.getTokens(2);
             // var t2 = this.$refs.ace.editor.session.bgTokenizer.getState(2);
-            var ace = require("brace");
-            var Range = ace.acequire('ace/range').Range;
-            this.$refs.ace.editor.session.addMarker(new Range(1, 0, 1, 10), "ace_active-line", "fullLine");
-            console.log(new Range(1, 0, 3, 10));
+            // var ace = require("brace");
+            // var Range = ace.acequire('ace/range').Range;
+            // this.$refs.ace.editor.session.addMarker(new Range(1, 0, 1, 10), "ace_active-line", "fullLine");
+            // console.log(new Range(1, 0, 3, 10));
         },
     },
 }
