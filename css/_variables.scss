@@ -1,0 +1,19 @@
+// @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wdth,wght@100..125,200..800&display=swap');
+
+:root {
+    --h: 190;
+    --s: 50%;
+    --l: 80%;
+    --d: 20%;
+    --font-texts: 'BioRhyme', serif;
+    --font-headings: 'BioRhyme', serif;
+    --color-primary: hsl(var(--h), 0%, var(--d));
+    --color-secondary: hsl(var(--h), var(--s), var(--l));
+    @media (prefers-color-scheme: dark) {
+        --color-primary: hsl(var(--h), 0%, 90%);
+        --color-secondary: hsl(var(--h), var(--s), var(--d));
+    }
+}

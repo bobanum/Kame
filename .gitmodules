@@ -1,3 +1,10 @@
 [submodule "webponents"]
 	path = webponents
 	url = https://github.com/bobanum/webponents
+	branch = callbacks
+[submodule "ace"]
+	path = ace
+	url = https://github.com/ajaxorg/ace.git
+[submodule "monaco-editor"]
+	path = monaco-editor
+	url = https://github.com/microsoft/monaco-editor.git

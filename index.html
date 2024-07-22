@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kame 亀</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/logo_kame_flat.svg" type="image/x-icon">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js" integrity="sha512-8RnEqURPUc5aqFEN04aQEiPlSAdE0jlFS/9iGgUyNtwFnSKCXhmB6ZTNl7LnDtDWKabJIASzXrzD0K+LYexU9g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.min.js" integrity="sha512-I6CdJdruzGtvDyvdO4YsiAq+pkWf2efgd1ZUSK2FnM/u2VuRASPC7GowWQrWyjxCZn6CT89s3ddGI+be0Ak9Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css" integrity="sha512-uf06llspW44/LZpHzHT6qBOIVODjWtv4MxCricRxkzvopAlSWnTf6hpZTFxuuZcuNE9CBQhqE0Seu1CoRk84nQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/material.min.css" integrity="sha512-jA21084nir3cN96YuzJ1DbtDn30kxhxqQToAzCEGZcuRAswWfYirpUu8HVm8wRNoWDCYtA4iavd2Rb1bQSLv7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script type="module">
+		import Kame from './src/App.js';
+		// import { minimalSetup, EditorView } from "codemirror";
+		import WPMenu from './MenuComponent/index.js';
+
+	</script>
+	<script defer type="module">
+		const options = {
+			value: "function myScript(){return 100;}\n",
+			mode: "javascript",
+			lineNumbers: true,
+			theme: "material",
+		};
+		const cm = new CodeMirror(
+			document.getElementById("editor"),
+			options
+		);
+		console.log(cm);
+	</script>
+</head>
+
+<body>
+	<div id="layout" class="ok">
+		<nav><wp-menu class="ok" horizontal>
+			<wp-menu-item label="File">
+				<wp-menu>
+					<wp-menu-item label="New"></wp-menu-item>
+					<wp-menu-item label="Open"></wp-menu-item>
+					<wp-menu-item label="Close">
+						<wp-menu>
+							<wp-menu-item label="Close"></wp-menu-item>
+							<wp-menu-item label="Close All"></wp-menu-item>
+						</wp-menu>
+					</wp-menu-item>
+					<wp-menu-item label="Save"></wp-menu-item>
+					<wp-menu-item label="Save As"></wp-menu-item>
+				</wp-menu>
+			</wp-menu-item>
+			<wp-menu-item label="Edit"></wp-menu-item>
+			<wp-menu-item label="Selection"></wp-menu-item>
+			<wp-menu-item label="View"></wp-menu-item>
+		</wp-menu></nav>
+		<!-- <header><img src="img/logo_kame_flat.svg" alt=""> KAME 亀</header> -->
+		<main>
+			<!-- <div id="editor"></div> -->
+			<div id="output"></div>
+		</main>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme:wdth,wght@100..125,200..800&display=swap");
+:root {
+  --h: 190;
+  --s: 50%;
+  --l: 80%;
+  --d: 20%;
+  --font-texts: "BioRhyme", serif;
+  --font-headings: "BioRhyme", serif;
+  --color-primary: hsl(var(--h), 0%, var(--d));
+  --color-secondary: hsl(var(--h), var(--s), var(--l));
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: hsl(var(--h), 0%, 90%);
+    --color-secondary: hsl(var(--h), var(--s), var(--d));
+  }
+}
+
+html {
+  height: 100vh;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100%;
+  font-family: var(--font-texts);
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-headings);
+}
+
+h1 {
+  font-stretch: expanded;
+  font-weight: 800;
+}
+
+#layout {
+  min-height: 100%;
+}

@@ -1,0 +1,26 @@
+wp-menu-item {
+	display: block;
+}
+:host([horizontal]) {
+	flex-direction: row;
+	position: static;
+	::slotted(*) {
+		position: relative;
+		padding: .5em;
+		margin: .5em !important;
+		border: solid blue !important;
+	}
+}
+:host {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	z-index: 1000;
+	white-space: nowrap;
+	left: 100%;
+	top:0;
+	> ::slotted(*) {
+		position: relative;
+		border: solid red;
+	}
+}
